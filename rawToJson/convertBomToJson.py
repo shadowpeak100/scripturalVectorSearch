@@ -2,7 +2,7 @@ import argparse
 import re
 import json
 
-from bomRawLine import BomRawLine
+from shared.bomRawLine import BomRawLine
 
 
 # I acknowledge this code is a bit rigid, the gutenberg txt file is helpful but needs some formatting help
@@ -74,7 +74,7 @@ def extractChapterVerse(line):
         text = match.group(3)
         return num1, num2, text
     else:
-        return None, None
+        return None, None, None
 
 def isEndOfBom(line):
     return line == "*** END OF THE PROJECT GUTENBERG EBOOK THE BOOK OF MORMON ***"

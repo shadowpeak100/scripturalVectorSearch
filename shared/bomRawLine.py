@@ -27,4 +27,21 @@ class BomRawLine:
             "shortBookTitle": self.shortBookTitle
         }
 
+    def from_dict(self, dictionary):
+        if "custom_id" in dictionary:
+            self.custom_id = dictionary["custom_id"]
+        if "url" in dictionary:
+            self.url = dictionary["url"]
+        if "verse" in dictionary:
+            self.verse = dictionary["verse"]
+        if "verseNumber" in dictionary:
+            self.verseNumber = dictionary["verseNumber"]
+        if "chapter" in dictionary:
+            self.chapter = dictionary["chapter"]
+        if "book" in dictionary:
+            self.book = dictionary["book"]
+        if "shortBookTitle" in dictionary:
+            self.shortBookTitle = dictionary["shortBookTitle"]
+
+
 
