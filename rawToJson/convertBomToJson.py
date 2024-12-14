@@ -1,6 +1,9 @@
 import argparse
+import os
 import re
 import json
+
+from dotenv import load_dotenv
 
 from shared.bomRawLine import BomRawLine
 
@@ -8,19 +11,11 @@ from shared.bomRawLine import BomRawLine
 # I acknowledge this code is a bit rigid, the gutenberg txt file is helpful but needs some formatting help
 
 def main():
-    parser = argparse.ArgumentParser(description='Handle connection string input')
+    load_dotenv()
+    inputFilePath = os.getenv("INPUT_FILE")
+    outputFilePath = os.getenv("OUTPUT_FILE")
 
-    # Argument gets passed in as: """ -f="Your File HERE" """
-
-    parser.add_argument('-f', type=str, required=True,
-                        help='file to raw book of mormon text file')
-
-    parser.add_argument('-o', type=str, required=True,
-                        help='output file path')
-
-    args = parser.parse_args()
-
-    iterateFile(args.f, args.o)
+    iterateFile(inputFilePath, outputFilePath)
 
 def iterateFile(inputFilePath, outputFilePath):
     #for simplicity we are just looking at BOM verses so we will skip the intro information
