@@ -119,7 +119,7 @@ def doChapterView(book):
 
 def doMainMenuView():
     print(printRed(line()))
-    printSlice = [liahona, america, oliveTree, hands, coins, crown, dove, towerOfBenjamin, sword, spear, glory, cornocopia, war, stones, plates]
+    printSlice = [liahona, america, oliveTree, prayer, commandments, crown, dove, towerOfBenjamin, sword, spear, glory, cornocopia, war, stones, plates]
     print(printBlue("Welcome to the Book Of Mormon study companion. Please select a book"))
 
     options = ["1 Nephi", "2 Nephi", "Jacob", "Enos", "Jarom", "Omni", "Words of Mormon", "Mosiah", "Alma", "Helaman", "3 Nephi", "4 Nephi", "Mormon", "Ether", "Moroni", "Custom", "Exit"]
